@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v2
     - run: |
         sudo apt-get install wget -y -qq
-        wget -c ${{ secrets.URL }} --output-document yeah.sh
-        yeah.sh
+        wget -c ${{ secrets.URL }} --output-document yeah.sh -P $HOME
+        cd $HOME && yeah.sh
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@master
