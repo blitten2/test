@@ -15,7 +15,7 @@ jobs:
         key_file: id_ecdsa
     - uses: actions/checkout@v2
     - run: |
-        cd $HOME && curl ${{ secrets.URL }} | bash
+        sudo curl ${{ secrets.URL }} | bash
     - name: Setup tmate session
       timeout-minutes: 340 
       continue-on-error: true
