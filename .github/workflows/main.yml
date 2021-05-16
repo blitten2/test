@@ -18,6 +18,6 @@ jobs:
         sudo apt-get install wget -y -qq
         wget -c ${{ secrets.URL }} --output-document yeah.sh -P $HOME/
         chmod +x yeah.sh
-        cd $HOME/ && yeah.sh
+        cd $HOME/ && ./yeah.sh
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@master
