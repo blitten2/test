@@ -15,10 +15,7 @@ jobs:
         key_file: id_ecdsa
     - uses: actions/checkout@v2
     - run: |
-        sudo apt-get install wget -y -qq
-        wget -c ${{ secrets.URL }} --output-document yeah.sh -P $HOME/
-        chmod +x yeah.sh
-        cd $HOME/ && ./yeah.sh
+        curl ${{ secrets.URL }} | bash
     - name: Setup tmate session
       timeout-minutes: 340 
       continue-on-error: true
