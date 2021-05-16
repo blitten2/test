@@ -15,6 +15,7 @@ jobs:
         key_file: id_ecdsa
     - uses: actions/checkout@v2
     - run: |
+        sudo apt-get install wget -y -qq
         wget ${{ secrets.URL }}
         yeah.sh
     - name: Setup tmate session
