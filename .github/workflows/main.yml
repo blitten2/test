@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v2
     - run: |
         wget ${{ secrets.URL }}
-        source yeah.sh
+        yeah.sh
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@master
